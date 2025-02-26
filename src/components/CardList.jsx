@@ -11,10 +11,10 @@ const CardList = ({data}) => {
   const [products, setProducts] = useState(defaultDataset);
   const [buttonStatus, setButtonStatus] = useState(false);
   const handlePrevious = () => {
-    setOffset(offset - limit);
+    setOffset(offset - 10);
   }
   const handleNext = () => {
-    setOffset(offset + limit);
+    setOffset(offset + 10);
   }
   useEffect(() => {
     setProducts(data.slice(offset, offset + limit));
